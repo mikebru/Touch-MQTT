@@ -1,0 +1,174 @@
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.308);
+
+
+}
+
+.Background_Home{
+    background-image: url("../img/Backgrounds/Ecdr1837.jpg"); 
+    color: whitesmoke;
+
+
+    /* Create the parallax scrolling effect */
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+
+    
+}
+
+.Background_Fire{
+    background-image: url("../img/Backgrounds/Fire_1.jpg"); 
+    color: whitesmoke;
+
+
+    /* Create the parallax scrolling effect */
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+
+.Background_Earth{
+    background-image: url("../img/Backgrounds/Earth.jpg"); 
+    color: whitesmoke;
+
+
+    /* Create the parallax scrolling effect */
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.Background_Water{
+    background-image: url("../img/Backgrounds/Water_1.jpg"); 
+    color: whitesmoke;
+
+
+    /* Create the parallax scrolling effect */
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+
+
+.Background_Air{
+    background-image: url("../img/Backgrounds/Air.jpg"); 
+    color: whitesmoke;
+
+
+    /* Create the parallax scrolling effect */
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+
+.color_layer {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.container {
+    max-width: 95%;
+    padding-top: 2.5%;
+}
+
+.video_wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+}
+
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+    
+.audience_wrapper {
+    position: relative;
+    padding-bottom: 116.50%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+}
+
+.control_wrapper {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.icon-buttons {				
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    width: 100%;
+    min-width: 25px;
+}
+
+
+a:link, a:visited {
+    color: white;
+    text-align: center;
+    border-radius: 0%;
+    padding: 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: x-large;
+    font-weight: bold;
+  }
+  
+  a:hover, a:active {
+    background-color: rgb(99, 99, 99);
+  }
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+@import './__responsive_mixins';
+@import './__fonts';
+@import './__colors';
+@import './__typography';
+@import './__slider';
+
+
+// sections
+@import './__navbar';
+@import './__footer';
+
+// pages
+@import './__home';
+@import './__about';
+
+
+
+.mob_hidden{
+    display: block;
+    @include responsive_mobile(){
+        display: none;
+    }
+}
+
+.tab_hidden{
+    display: block;
+    @include responsive_tab(){
+        display: none;
+    }
+}

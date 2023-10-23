@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Garden</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-slider.css">
+    <link rel="stylesheet" href="css/mainStyles.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body class="Background_Earth" onload="Connect()">
+    <div class="navbar_wraper">
+        <!-- will load common navbar with js $().load() method -->
+    </div>
+    <section class="home_header">
+        <div class="container">
+
+
+            <!--main title-->
+            <div class="row justify-content-center">
+                <h1 class="robo_title">-Earth-</h1>
+            </div>
+
+
+
+            <!--Main View and Room Select  -->
+            <div class="row justify-content-center" style="padding-top: 2.5%;">
+                <div class="col-9 border rounded">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe title="Geo View" src="https://obs.ninja/?view=geo&bitrate=3000" allowfullscreen
+                            class="second-row"></iframe>
+                    </div>
+                </div>
+
+
+                <div class="col-3 border rounded" style="vertical-align: middle;">
+
+                    <iframe title="Chat View" src="https://obs.ninja/?room=frank_group5&roombitrate=500"
+                        allow="camera;microphone">
+                    </iframe>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!--Controls  -->
+            <div class="row justify-content-center color_layer" style="padding-top: 2.0%; padding-left: 0%;">
+
+                <div class="col-md-8 border rounded control_wrapper">
+                    <h5>Elemental Controls</h5>
+                    <div class="col-12 d-table">
+                        <div class="d-table-cell" style="text-align: center;">
+                            <label for="Intensity"> Energy</label>
+                            <div id="Intensity"> 0.5 </div>
+                            <input label="Intensity" type="range" min="0.0" max="1.0" value="0.5" class="vertical"
+                                step=".01" orient="vertical" id="sliderIntensity">
+                        </div>
+
+                        <div class="d-table-cell" style="text-align: center;">
+                            <label for="Saturation"> Vibrance</label>
+                            <div id="Saturation"> 0.5 </div>
+                            <input type="range" min="0.0" max="1.0" value=".5" class="vertical" step=".01"
+                                orient="vertical" id="sliderSaturation">
+                        </div>
+
+
+                        <div class="d-table-cell" style="text-align: center;">
+                            <label for="Opacity"> Presence</label>
+                            <div id="Opacity"> 1 </div>
+                            <input type="range" min="0.0" max="1.0" value="1" class="vertical" step=".01"
+                                orient="vertical" id="sliderOpacity">
+                        </div>
+
+
+                        <div class="d-table-cell" style="text-align: center;">
+                            <label for="Speed"> Resonance</label>
+                            <div id="Speed"> 1 </div>
+                            <input type="range" min="0.0" max="1.0" value=".2" class="vertical" step=".01"
+                                orient="vertical" id="sliderSpeed">
+                        </div>
+
+
+                        <div class="d-table-cell" style="text-align: center;">
+                            <label for="State"> Dimension</label>
+                            <div id="State"> 1 </div>
+                            <input type="range" min="0" max="3" value="1" class="vertical" step="1" orient="vertical"
+                                id="sliderState">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 border rounded control_wrapper">
+                    <h5>Camera Controls</h5>
+
+
+                    <div class="col-10 btn-group-vertical ml-3 mt-3 " style="align-content: center;" role="group">
+                        <div class="btn-group">
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
+                            <button name="Tilt Up" type="button" style="font-size: 30px; font-weight: bolder;"
+                                class="btn btn-outline-primary py-3" onclick="PublishMessage('Tilt/5', 'geo')"> &#8679;
+                            </button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
+                        </div>
+                        <div class="btn-group">
+                            <button name="Pan Left" type="button" style="font-size: 30px; font-weight: bolder;"
+                                class="btn btn-outline-primary py-3"
+                                onclick="PublishMessage('Pan/-5', 'geo')">&#8678;</button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
+                            <button name="Pan Right" type="button" style="font-size: 30px; font-weight: bolder;"
+                                class="btn btn-outline-primary py-3"
+                                onclick="PublishMessage('Pan/5', 'geo')">&#8680;</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" disabled class="btn btn-outline-secondary py-3"></button>
+                            <button name="Tilt Down" type="button" style="font-size: 30px; font-weight: bolder;"
+                                class="btn btn-outline-primary py-3"
+                                onclick="PublishMessage('Tilt/-5', 'geo')">&#8681;</button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+                        
+            <!--talk space title-->
+            <div class="row justify-content-center" style="padding-top: 2.5%;">
+                <div class="col-12 " style="vertical-align: middle;">
+                    <h5 style="text-align:center">Play with the slider controls to change the lighting, soundscape, and digital content.</h5> <br> <br>
+
+                    <h5 style="text-align:center">Camera controls can adjust viewing angle. Controls may periodically stop working. We apologize! </h5> <br> <br>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <div class="footer_wraper ">
+        <!-- will load common navbar with js $().load() method -->
+    </div>
+
+    <script src="dependencies/js/jquery.min.js"></script>
+    <script src="dependencies/js/popper.min.js"></script>
+    <script src="dependencies/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-slider.js"></script>
+    <script src="js/mainFunctions.js"></script>
+    <script src="dependencies/js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- MQTT Websockets Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+
+    <script>
+
+        var topic = "geo"
+
+        var sliderIntensity = document.getElementById("sliderIntensity");
+        var sliderSat = document.getElementById("sliderSat");
+        var sliderOpacity = document.getElementById("sliderOpacity");
+        var sliderSpeed = document.getElementById("sliderSpeed");
+        var sliderState = document.getElementById("sliderState");
+
+
+
+        sliderIntensity.oninput = function () {
+            PublishMessage("Intensity/" + String(this.value), topic);
+            document.getElementById("Intensity").innerHTML = this.value;
+        }
+        sliderSaturation.oninput = function () {
+            PublishMessage("Saturation/" + String(this.value), topic);
+            document.getElementById("Saturation").innerHTML = this.value;
+        }
+        sliderOpacity.oninput = function () {
+            PublishMessage("Opacity/" + String(this.value), topic);
+            document.getElementById("Opacity").innerHTML = this.value;
+        }
+        sliderSpeed.oninput = function () {
+            PublishMessage("Speed/" + String(this.value), topic);
+            document.getElementById("Speed").innerHTML = this.value;
+        }
+        sliderState.oninput = function () {
+            PublishMessage("State/" + String(this.value), topic);
+            document.getElementById("State").innerHTML = this.value;
+        }
+
+    </script>
+
+</body>
+
+</html>
