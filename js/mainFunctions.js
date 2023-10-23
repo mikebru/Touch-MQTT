@@ -24,7 +24,6 @@ function Connect() {
     mqtt = new Paho.MQTT.Client(uri[0], parseInt(uri[1]), clientid);
     var options = {
         useSSL: useSSL,
-        timeout: 3,
         cleanSession: cleanSession
     };
     if (username != "")
@@ -53,7 +52,6 @@ function ConnectMessage(Topic, Message) {
     mqtt = new Paho.MQTT.Client(uri[0], parseInt(uri[1]), clientid);
     var options = {
         useSSL: useSSL,
-        timeout: 3,
         cleanSession: cleanSession
     };
     if (username != "")
@@ -65,7 +63,7 @@ function ConnectMessage(Topic, Message) {
 
     console.log(Topic);
 
-    setTimeout(() => {PublishMessage(Message, Topic);}, 1500);
+   // setTimeout(() => {PublishMessage(Message, Topic);}, 1500);
 
 }
 
